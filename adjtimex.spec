@@ -6,7 +6,6 @@ License:	GPL
 Group:		System/Kernel and hardware
 URL:		ftp://ftp.debian.org/debian/pool/main/a/adjtimex/
 Source:		ftp://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.bz2
-Buildroot:	%_tmppath/%name-%version-%release-root
 
 %description
 Adjtimex is a kernel clock management program, which the
