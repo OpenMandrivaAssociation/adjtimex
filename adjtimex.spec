@@ -2,11 +2,14 @@ Summary:	A utility for adjusting kernel time variables
 Name:		adjtimex
 Version:	1.21
 Release:	%mkrel 4
-License:	GPL
+License:	GPLv2+
 Group:		System/Kernel and hardware
 URL:		ftp://ftp.debian.org/debian/pool/main/a/adjtimex/
-Source:		ftp://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.bz2
-Buildroot:	%_tmppath/%name-%version-%release-root
+Source0:	ftp://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.bz2
+Patch0:		adjtimex-1.13-glibc.patch 
+Patch1:		adjtimex-1.21-optstring.patch 
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+
 
 %description
 Adjtimex is a kernel clock management program, which the
@@ -21,22 +24,25 @@ temporelles.
 
 %prep
 %setup -q
+%patch0 -p1 -b .glibc
+%patch1 -p1 -b .optstring
+
 
 %build
 %configure 
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-install -s -m755 adjtimex -D $RPM_BUILD_ROOT/%{_sbindir}/adjtimex
-install -m644 adjtimex.8 -D $RPM_BUILD_ROOT/%{_mandir}/man8/adjtimex.8
+rm -rf %{buildroot}
+
+install -m755 adjtimex -D %{buildroot}/%{_sbindir}/adjtimex
+install -m644 adjtimex.8 -D %{buildroot}/%{_mandir}/man8/adjtimex.8
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc README COPYRIGHT COPYING README.ru ChangeLog
 %{_sbindir}/adjtimex
 %{_mandir}/man8/adjtimex.8*
-
