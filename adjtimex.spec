@@ -1,7 +1,7 @@
 Summary:	A utility for adjusting kernel time variables
 Name:		adjtimex
 Version:	1.21
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	GPLv2+
 Group:		System/Kernel and hardware
 URL:		ftp://ftp.debian.org/debian/pool/main/a/adjtimex/
