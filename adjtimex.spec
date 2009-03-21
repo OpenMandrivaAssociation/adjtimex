@@ -1,13 +1,11 @@
 Summary:	A utility for adjusting kernel time variables
 Name:		adjtimex
-Version:	1.21
-Release:	%mkrel 6
+Version:	1.26
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 URL:		ftp://ftp.debian.org/debian/pool/main/a/adjtimex/
-Source0:	ftp://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.bz2
-Patch0:		adjtimex-1.13-glibc.patch 
-Patch1:		adjtimex-1.21-optstring.patch 
+Source0:	ftp://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 
@@ -24,9 +22,6 @@ temporelles.
 
 %prep
 %setup -q
-%patch0 -p1 -b .glibc
-%patch1 -p1 -b .optstring
-
 
 %build
 %configure 
