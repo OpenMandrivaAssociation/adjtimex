@@ -1,6 +1,6 @@
 Summary:	A utility for adjusting kernel time variables
 Name:		adjtimex
-Version:	1.26
+Version:	1.27.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Kernel and hardware
