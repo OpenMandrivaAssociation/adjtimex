@@ -1,6 +1,6 @@
 Summary:	A utility for adjusting kernel time variables
 Name:		adjtimex
-Version:	1.28
+Version:	1.29
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		System/Kernel and hardware
@@ -24,7 +24,7 @@ temporelles.
 %setup -q
 
 %build
-%configure 
+%configure2_5x
 %make
 
 %install
