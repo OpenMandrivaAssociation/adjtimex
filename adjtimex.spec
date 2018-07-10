@@ -1,7 +1,7 @@
 Summary:	A utility for adjusting kernel time variables
 Name:		adjtimex
 Version:	1.29
-Release:	13
+Release:	14
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		ftp://ftp.debian.org/debian/pool/main/a/adjtimex/
@@ -14,7 +14,7 @@ use adjtimex to view the time variables.
 
 %description -l fr
 Adjtimex est un programme de gestion de l'horloge du kernel, que le
-superutilisateur peut utiliser pour corriger l'horloge système. Les
+superutilisateur peut utiliser pour corriger l'horloge systÃ¨me. Les
 utilisateurs peuvent utiliser adjtimex pour afficher les variables
 temporelles.
 
