@@ -1,11 +1,11 @@
 Summary:	A utility for adjusting kernel time variables
 Name:		adjtimex
 Version:	1.29
-Release:	15
+Release:	16
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		ftp://ftp.debian.org/debian/pool/main/a/adjtimex/
-Source0:	ftp://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.gz
+Url:		http://ftp.debian.org/debian/pool/main/a/adjtimex/
+Source0:	http://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.gz
 
 %description
 Adjtimex is a kernel clock management program, which the
@@ -22,7 +22,7 @@ temporelles.
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
