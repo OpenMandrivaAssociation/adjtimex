@@ -4,7 +4,7 @@ Version:	1.29
 Release:	17
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://ftp.debian.org/debian/pool/main/a/adjtimex/
+Url:		https://ftp.debian.org/debian/pool/main/a/adjtimex/
 Source0:	http://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.gz
 
 %description
