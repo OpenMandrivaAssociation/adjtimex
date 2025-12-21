@@ -7,6 +7,11 @@ Group:		System/Kernel and hardware
 Url:		https://ftp.debian.org/debian/pool/main/a/adjtimex/
 Source0:	http://ftp.debian.org/debian/pool/main/a/adjtimex/adjtimex_%{version}.orig.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 Adjtimex is a kernel clock management program, which the
 superuser may use to correct any drift in the system's clock.  Users can
